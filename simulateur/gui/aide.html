@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+
+    <body>
+        <h1>
+            Aide pour l'application de simulation de machine de Turing 
+        </h1>
+        <h2>Page d'accueil</h2>
+		<img src="Screen/screen_accueil.png" alt="Page d'accueil">
+		<p>Pour entrer dans l'interface de création d'une machine de Turing 
+		vous devez cliquer sur le bouton "Créer un nouvelle machine" ou en cliquant sur le menu déroulant "Fichier".
+		Une interface va s'ouvrir pour que vous choisissiez le nombres de rubans que vous utiliserez.</p>
+		<img src="Screen/screen_rub.png">
+		<p>Pour charger une machine de Turing depuis votre gestionnaire
+		vous devez cliquer sur le bouton "Charger une machine" ou en cliquant sur le menu déroulant "Fichier".</p>
+		
+		<h2>Page de Saisie</h2>
+		<img src="Screen/screen_saisie.png" alt="Page Saisie">
+		<p>Les premières zones de textes servent à initialiser les rubans pour la simulation. Le nombre varie en fonction du nombre de rubans que vous avez entré juste avant.</p>
+		<p>La zone de texte devant "Règles" permet d'écrire une règle et de la rajouter à la liste de règles en appuyant sur le bouton "Ajouter". 
+		Les cases à cocher permettent d'identifier l'état initial (Etat à gauche de la règle) et l'état final (Etat à droite de la règle).
+		Enfin, pour supprimer une règle, il vous faut sélectionner une règles dans la liste de règles et de cliquer sur le bouton "supp" </p>
+		
+		<h2>Syntaxe des règles</h2>
+		<ul>
+		<li>Un état est une chaine de caractère de caractère pouvant contenir : <B>A-Za-z0-9- !@*_&# </B> </li>
+		<li>la séparation entre l’état et chaque symbole est une virgule (attention au fait qu’un symbole soit une virgule)</li>
+		<li>Un symbole est un caractère quelconque. Il ne peut pas commencer par un "\" ni être un espace.</li>
+		<li>Le symbole blanc est noté "_" </li>
+		<li>Le symbole pour la wildcard est "∗" </li>
+		<li>Une wildcard dans la partie droite de la règle signifie laisser le symbole courant</li>
+		<li>La séparation entre la clef et la valeur (Partie droite et gauche de la règle) est marquée par une "−>" </li>
+		<li>Les mouvements sont notés : <B>Ri</B> pour droite, <B>Le</B> pour gauche, et <B>St</B> pour rester sur place</li>
+		</ul>
+		
+		<B>Exemple de règle:</B> <I> q0, A -> q1, B, Ri </I> , cette règle est activée lorsqu'on est dans l'état 'q0' et qu'on lit un A sur le ruban. Dans ce cas, on se place dans l'état q1 on écrit un 'B'
+		sur le ruban et on déplace la tête de lecture à droite
+    </body>
+</head>
